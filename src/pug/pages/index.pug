@@ -1,0 +1,22 @@
+extends ../layout/main
+
+block content
+  .goods-wrapper
+    .container
+  .button-list
+    button.btn.btn-prev
+      | &#8592; 
+      |  предыдущая страница
+    button.btn.btn-next
+      | следующая страница 
+      |  &#8594;
+  .cart
+    .cart-body
+      .cart-head
+        p.cart-title Корзина
+        .cart-total
+          | Общая сумма 
+          span
+      .cart-wrapper
+      button.btn.btn-primary.cart-confirm Оформить заказ
+      .cart-close

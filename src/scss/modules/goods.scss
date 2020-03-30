@@ -1,0 +1,86 @@
+.goods-wrapper {
+  min-height: 50vh;
+  & .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    & .card-wrapper {
+      display: flex;
+      margin-bottom: 40px;
+      & .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        & .card-img-wrapper {
+          text-align: center;
+          margin-bottom: 20px;
+          & img {
+            display: block;
+            margin: auto;
+          }
+        }
+        & .card-body {
+          padding: 0 10px 10px;
+          & .card-title {
+            overflow: hidden;
+            display: block;
+            font-weight: bold;
+            text-align: center;
+          }
+          & .card-price {
+            margin: 20px 0;
+            font-size: $fz10;
+          }
+          & .card-price,
+          & .card-add {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.button-list {
+  text-align: center;
+  margin-bottom: 50px;
+  & button {
+    display: inline-block;
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .goods-wrapper {
+    & .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      & .card-wrapper {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: $smDesktopWidth) {
+  .goods-wrapper {
+    & .container {
+      & .card-wrapper {
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .goods-wrapper {
+    & .container {
+      & .card-wrapper {
+        width: 25%;
+      }
+    }
+  }
+}

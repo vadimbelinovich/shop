@@ -1,0 +1,101 @@
+header.header {
+  padding: 20px 0;
+  width: 100%;
+  margin-bottom: 50px;
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & h1.title {
+      font-size: $fz8;
+      text-align: center;
+      font-weight: $bold;
+      text-transform: uppercase;
+      letter-spacing: $ls4;
+    }
+    & .nav-elements {
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      position: relative;
+      &:hover {
+        & svg path {
+          fill: $orange;
+        }
+      }
+      & span.counter {
+        background-color: $orange;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        color: $white;
+        line-height: 1;
+        padding: 2px 5px;
+        border-radius: 3px;
+      }
+    }
+    & .sort {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & form {
+        & label {
+          display: flex;
+          align-items: center;
+          & input {
+            margin-right: 5px;
+          }
+        }
+      }
+      & span.sort {
+        cursor: pointer;
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $smDesktopWidth) {
+  header.header {
+    & .container {
+      & .nav-elements {
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        position: relative;
+        &:hover {
+          & svg path {
+            fill: $orange;
+          }
+        }
+        & span.counter {
+          background-color: $orange;
+          position: absolute;
+          right: -5px;
+          top: -5px;
+          color: $white;
+          line-height: 1;
+          padding: 2px 5px;
+          border-radius: 3px;
+        }
+      }
+      & .sort {
+        flex-direction: row;
+        & form {
+          margin-left: 50px;
+        }
+        & span {
+          display: inline-block;
+          padding: 0 10px;
+          &.sort {
+            cursor: pointer;
+          }
+          &.active {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

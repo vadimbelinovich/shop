@@ -1,0 +1,14 @@
+# Default
+.vscode
+
+# Node
+node_modules
+
+# Dist & test
+test
+dist
+
+# Special
+Thumbs.db
+.DS_Store*
+package-lock.json
